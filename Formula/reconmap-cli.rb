@@ -5,25 +5,25 @@
 class ReconmapCli < Formula
   desc "Reconmap tools as homebrew tap."
   homepage "https://github.com/reconmap"
-  version "0.9.7"
-  license "GPL3"
+  version "0.9.8"
+  license "GPL-3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.7/reconmap-cli-Darwin-x86_64.tar.gz"
-      sha256 "740974f563e4bb71704b647bbe7009248dafbf5c1850dc1da1969aeb94bac37b"
+      url "https://github.com/reconmap/cli/releases/download/0.9.8/reconmap-cli-Darwin-x86_64.tar.gz"
+      sha256 "eada8bcb7a6bef544e3aaaef8bdfe039262ae531426dd4fb4c16254c9996e60a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.7/reconmap-cli-Linux-x86_64.tar.gz"
-      sha256 "a62bbae0a21715b157be1d8c022b6dd0173ea41541632b04a6d31141c568d078"
+      url "https://github.com/reconmap/cli/releases/download/0.9.8/reconmap-cli-Linux-x86_64.tar.gz"
+      sha256 "fea04daa6be94114689fd08d3761fa7443bb6e897a6a14d2a80391c1090f9a42"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.9.7/reconmap-cli-Linux-arm64.tar.gz"
-      sha256 "97446eab95983f60d7711c92faf93fc23ffb51fb51a440b5db40a7f46489fe0d"
+      url "https://github.com/reconmap/cli/releases/download/0.9.8/reconmap-cli-Linux-arm64.tar.gz"
+      sha256 "99f30dcb5c315f56b70b666fcc3b88006dbcb50e19803ae7e67d3529ecac362c"
     end
   end
 

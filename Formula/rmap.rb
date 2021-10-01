@@ -5,29 +5,33 @@
 class Rmap < Formula
   desc "Reconmap tools as homebrew tap."
   homepage "https://github.com/reconmap"
-  version "0.9.11"
+  version "0.9.12"
   license "GPL-3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.11/reconmap-cli-Darwin-x86_64.tar.gz"
-      sha256 "bb998ebf8a7623e8996df69fc9d828ab5d23de13948ae54eadf0f417b1038071"
+      url "https://github.com/reconmap/cli/releases/download/0.9.12/reconmap-cli-Darwin-x86_64.tar.gz"
+      sha256 "f75c857c07b4dca3329a2ec2ecbce934106ee5ffda05078f1543f02e75018875"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/reconmap/cli/releases/download/0.9.12/reconmap-cli-Darwin-arm64.tar.gz"
+      sha256 "9900a62ad1d1d126156688703e01edc8ee631318c23f6cc610aa9499832e2eaf"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.11/reconmap-cli-Linux-x86_64.tar.gz"
-      sha256 "d6fd6ddff367b856def31c209d95973f3e2fc782de74b34e3c92f7be8468f965"
+      url "https://github.com/reconmap/cli/releases/download/0.9.12/reconmap-cli-Linux-x86_64.tar.gz"
+      sha256 "e2535718b1c68f5e8c1b9d2c0443970cb668b51242db444f4542bf8f132ada0b"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.9.11/reconmap-cli-Linux-arm.tar.gz"
-      sha256 "e5fdcdca122036f585403937afabb267346d29e9523ab891c566de391e46a6a1"
+      url "https://github.com/reconmap/cli/releases/download/0.9.12/reconmap-cli-Linux-arm.tar.gz"
+      sha256 "5531b7f437d17528119ee8e4a178ef2ef51f11fc438570fa6b786bedf69ebefb"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.9.11/reconmap-cli-Linux-arm64.tar.gz"
-      sha256 "79acc7e2383530e96fd2f01cc1f5faba5de2edd7839b3f7b555538eaf54fff28"
+      url "https://github.com/reconmap/cli/releases/download/0.9.12/reconmap-cli-Linux-arm64.tar.gz"
+      sha256 "d15c693191c73a46f509f6e26ebde1a7b42cb684f7d64b53cb29159affba2d6a"
     end
   end
 

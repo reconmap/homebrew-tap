@@ -5,33 +5,33 @@
 class Rmap < Formula
   desc "Reconmap tools as homebrew tap."
   homepage "https://github.com/reconmap"
-  version "0.9.13"
+  version "0.9.15"
   license "GPL-3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.13/rmap-Darwin-x86_64.tar.gz"
-      sha256 "dc0142ab7c7293ea36498179055830fc5ee40a74973319a2034a5001eaac722d"
+      url "https://github.com/reconmap/cli/releases/download/0.9.15/rmap-Darwin-x86_64.tar.gz"
+      sha256 "73810a8ecc1d319d9b5086a81a417653256c10adadf7298ef08af618daac69a9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reconmap/cli/releases/download/0.9.13/rmap-Darwin-arm64.tar.gz"
-      sha256 "ceefe15556b3fa479a8febfba49ab1b86929c04d3262a897505217ff77e42fdc"
+      url "https://github.com/reconmap/cli/releases/download/0.9.15/rmap-Darwin-arm64.tar.gz"
+      sha256 "5a659589a63d9378dea885ae573e054eb8602b5b1bb4ab3f4a5eadc1633d4127"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.9.13/rmap-Linux-x86_64.tar.gz"
-      sha256 "aead3d755b42c26a874632105e7a2671b5506d53459898f2630b9f4167d647b7"
+      url "https://github.com/reconmap/cli/releases/download/0.9.15/rmap-Linux-x86_64.tar.gz"
+      sha256 "ccefa5e7461fe92fd2d0e5de94a73e4900c3ccb6c327dea7f098083de0735030"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.9.13/rmap-Linux-arm.tar.gz"
-      sha256 "5b10d034d44d53efc0dbff8b8c121bc536c3122e1e4e888d711095268d3098f5"
+      url "https://github.com/reconmap/cli/releases/download/0.9.15/rmap-Linux-arm.tar.gz"
+      sha256 "d67d661c9c5b5c4e81f179010304246533f40098f4857d849f32d12b4061706c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.9.13/rmap-Linux-arm64.tar.gz"
-      sha256 "7fd2e306d56f72af42e5269e8241f9c474b9e1cdd855778641045cf1bb1f0707"
+      url "https://github.com/reconmap/cli/releases/download/0.9.15/rmap-Linux-arm64.tar.gz"
+      sha256 "b14425f6ba9f31e089d72e8a2c2978d4ff11607de3cbc9243909e8245cd887a7"
     end
   end
 

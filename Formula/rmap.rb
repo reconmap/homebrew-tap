@@ -5,21 +5,21 @@
 class Rmap < Formula
   desc "Rmap: Command line interface for the Reconmap pentest automation and reporting tool."
   homepage "https://github.com/reconmap/cli"
-  version "0.20.0"
+  version "0.8.3"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.20.0/rmap-Darwin-x86_64.tar.gz"
-      sha256 "1ef75d294cc363aed142d20364fe415fd40e19e1e5238cbe9954df94b502a1cc"
+    if Hardware::CPU.arm?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.3/rmap-Darwin-arm64.tar.gz"
+      sha256 "ba2d455fddb5b3da67a121d85753d28fc068a0ee6926c98224cbf1bb36864211"
 
       def install
         bin.install "rmap"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/reconmap/cli/releases/download/0.20.0/rmap-Darwin-arm64.tar.gz"
-      sha256 "efde382f681d78ba53e9d023ada643bcd620128f153ac91ca04d94f256892890"
+    if Hardware::CPU.intel?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.3/rmap-Darwin-x86_64.tar.gz"
+      sha256 "0c3212df58f4188ce39f0659adc54706195a171c9ded8d003ac1345480a79670"
 
       def install
         bin.install "rmap"
@@ -29,24 +29,24 @@ class Rmap < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.20.0/rmap-Linux-arm.tar.gz"
-      sha256 "3ed5d80f8427e6bce8b3ac9c0f81e60606dcb2ac67732f3a60c8c47e049e9432"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.3/rmap-Linux-arm.tar.gz"
+      sha256 "57d24dac9f9ced2654ddbddba52687e127c9440011da39d286ba028a3038e5bc"
 
       def install
         bin.install "rmap"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/reconmap/cli/releases/download/0.20.0/rmap-Linux-x86_64.tar.gz"
-      sha256 "8196b2025da6d1dfef4d091acef43ced4739c8801e565f12138373ff82d174dd"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.3/rmap-Linux-x86_64.tar.gz"
+      sha256 "bee65e46a57f9e4d7a12ec3c430e403a33b7b7be3d5147a20a2858d4275b3b67"
 
       def install
         bin.install "rmap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/cli/releases/download/0.20.0/rmap-Linux-arm64.tar.gz"
-      sha256 "da6151e3f35b5c32ccc528b639d7b62e972d9727ab19d3336d20882f8603f86b"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.3/rmap-Linux-arm64.tar.gz"
+      sha256 "586617be5320fa1b1058818150894bd5602599a3c703630d37cb2140fd7f7899"
 
       def install
         bin.install "rmap"

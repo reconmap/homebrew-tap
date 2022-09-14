@@ -5,21 +5,21 @@
 class Reconmapd < Formula
   desc "Reconmapd: The Reconmap agent allows clients to launch commands remotely, open interactive browser terminals, and receive push notifications."
   homepage "https://github.com/reconmap/agent"
-  version "0.2.1"
+  version "0.8.7"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/reconmap/agent/releases/download/0.2.1/reconmapd-Darwin-arm64.tar.gz"
-      sha256 "52307dc74d5e03cb11c56cdf7e1dd72465b9c6c52c6555b2d4d48a18cf50ae18"
+    if Hardware::CPU.intel?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.7/reconmapd-Darwin-x86_64.tar.gz"
+      sha256 "c5cf5f8c8b6bff04d91275dca84fb44e19547e282054e9da76ba99166c0d505f"
 
       def install
         bin.install "reconmapd"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/reconmap/agent/releases/download/0.2.1/reconmapd-Darwin-x86_64.tar.gz"
-      sha256 "c9c465fdf8e28c1e8ba66f9bd7421a74c5a23bd6899f4862db57e09178c5b980"
+    if Hardware::CPU.arm?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.7/reconmapd-Darwin-arm64.tar.gz"
+      sha256 "d2114ba3a286d5194635176b120d78601627a502e8997d3f5d4c115f5836f575"
 
       def install
         bin.install "reconmapd"
@@ -28,25 +28,25 @@ class Reconmapd < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/reconmap/agent/releases/download/0.2.1/reconmapd-Linux-x86_64.tar.gz"
-      sha256 "d9cafbae7b8bff9191e9afc65b8b24422565e3a1c1eec1d65b55f27b3e873a02"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.7/reconmapd-Linux-arm.tar.gz"
+      sha256 "1a4810a1e07aeccc48be108b052997c70e809d0cb340ff64df8c53c861e3a02b"
 
       def install
         bin.install "reconmapd"
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/agent/releases/download/0.2.1/reconmapd-Linux-arm.tar.gz"
-      sha256 "11b0265e480173fbb6fe9afe9018e6773c1d91a46fcd0253f061d01c35fa8174"
+    if Hardware::CPU.intel?
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.7/reconmapd-Linux-x86_64.tar.gz"
+      sha256 "65634125b9186523c22648f188a237911d4ef915c0ff9a1cf0e50cfcfa00d362"
 
       def install
         bin.install "reconmapd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reconmap/agent/releases/download/0.2.1/reconmapd-Linux-arm64.tar.gz"
-      sha256 "1b81f3db7f4a37025d127b0266176fa18a8f876c292c419758863df0466057e1"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.8.7/reconmapd-Linux-arm64.tar.gz"
+      sha256 "03d214d31982a1c9709119c8c0e9338c65df1366a821d4981540035fb74c9e2b"
 
       def install
         bin.install "reconmapd"

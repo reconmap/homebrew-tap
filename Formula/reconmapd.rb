@@ -2,7 +2,7 @@
 cask "reconmapd" do
   desc "Reconmapd: The Reconmap agent allows clients to launch commands remotely, open interactive browser terminals, and receive push notifications."
   homepage "https://github.com/reconmap/command-line-tools/tree/main/agent"
-  version "0.9.22"
+  version "0.9.23"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "reconmapd" do
 
   on_macos do
     on_intel do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/reconmapd-darwin-amd64.tar.gz"
-      sha256 "b1235a71595b6fc28ed65066a7e151744e44770ba4dfa47381a824099d9bb443"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/reconmapd-darwin-amd64.tar.gz"
+      sha256 "7d2ff72c4875048f376330fd80773fa79391aea5c59ca4c4ad029d3c6a51308c"
     end
     on_arm do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/reconmapd-darwin-arm64.tar.gz"
-      sha256 "3522b5f68c7fe7790fc0f0d37f18cff44d5be44673e37341622e7b9c7d66a637"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/reconmapd-darwin-arm64.tar.gz"
+      sha256 "c6b2a6de7303bbc6386c38b35080720d00ffa8e6c04274ae962d80116de99951"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/reconmapd-linux-amd64.tar.gz"
-      sha256 "ff11725d443f31a8e81d9be204645e2fd468001b9b43e4c5c446ce1accf26039"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/reconmapd-linux-amd64.tar.gz"
+      sha256 "ea8f15ce791568791c02d709fbfd66d22251c930ae41fe79405854ba5fa0ebf3"
     end
     on_arm do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/reconmapd-linux-arm64.tar.gz"
-      sha256 "5f9fd03ebd20dfe6dd3e92adb48119e2c752f403bd2b0a7d62e95127ef594947"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/reconmapd-linux-arm64.tar.gz"
+      sha256 "e9ba17a1ced93d45c8823653036db8938c365f29d6a20dd83a85f36ba295b4d9"
     end
   end
 

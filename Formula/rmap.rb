@@ -2,7 +2,7 @@
 cask "rmap" do
   desc "Rmap: Command line interface for the Reconmap pentest automation and reporting tool."
   homepage "https://github.com/reconmap/command-line-tools/tree/main/cli"
-  version "0.9.22"
+  version "0.9.23"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "rmap" do
 
   on_macos do
     on_intel do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/rmap-darwin-amd64.tar.gz"
-      sha256 "55ed80008b5fc72759d43dda430fa459b51c1d018ac6f0ca68eaabfd1cdf5b51"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/rmap-darwin-amd64.tar.gz"
+      sha256 "1010c48c2aea3df9edc330f11ffe49ef6a336205822252a2fe0698d6cd8602b7"
     end
     on_arm do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/rmap-darwin-arm64.tar.gz"
-      sha256 "cfd9c70c8c73cc4db35f50619c0908e71360248ff5d2d3cfc278503215190862"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/rmap-darwin-arm64.tar.gz"
+      sha256 "cd161f703a59c4c2f7f91038a39e5e3a3be50ff935670db007d754c957afd83e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/rmap-linux-amd64.tar.gz"
-      sha256 "ead1abafc111ea3012e578e891e52cc5a1f871829374231752e28f267cbb7fb4"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/rmap-linux-amd64.tar.gz"
+      sha256 "c054cc47112314f42bc7f1891ad8867555b84021aa30076ad9fc83b7f9353793"
     end
     on_arm do
-      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.22/rmap-linux-arm64.tar.gz"
-      sha256 "095e24195f9ffeb7f8bfed2da5f6504a4a8705ecfc9d78d3db8f1a3c0ee396d7"
+      url "https://github.com/reconmap/command-line-tools/releases/download/0.9.23/rmap-linux-arm64.tar.gz"
+      sha256 "de80d49f9076667c803e0a3cd993105b6483606d4659a757383cb00a0655f1c6"
     end
   end
 
